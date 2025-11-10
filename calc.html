@@ -1,0 +1,58 @@
+<!-- PRACTICA 2 - AUXILIATURA TECNOLOGIAS EMERGENTES I-->
+<!-- ESTUDIANTE: GABRIELA ALEJANDRA CHOQUE MAMANI-->
+<!-- PARALELO: 6C-->
+<!-- CI: 8292331 -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+ 
+  <meta charset="UTF-8">  <!-- Define el tipo de codificación de caracteres (UTF-8 admite acentos y caracteres especiales) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--  diseño  adaptable a pantallas de distintos tamaños  -->
+  <title>Calculadora - GABRIELA A. CHOQUE MAMANI - EMERGENTES I </title>
+  <link rel="stylesheet" href="style.css">    <!-- Vinculo con el archivo CSS  -->
+</head>
+
+<body>
+
+  <h1> CALCULADORA - GABRIELA A. CHOQUE MAMANI </h1>
+
+  <div class="calculadora">  <!-- Contenedor principal de la calculadora -->
+    <input type="text" id="pantalla" disabled> <!-- Pantalla donde se muestran los números y resultados -->
+    <div class="botones">   <!-- Contenedor que agrupa todos los botones -->
+
+      <!-- Fila 1: botones de control y operaciones -->
+      <button onclick="limpiar()">C</button>         <!-- Limpia toda la pantalla -->
+      <button onclick="borrar()">&lt;</button>       <!-- Borra el último carácter -->
+      <button onclick="agregar('*')">x</button>      <!-- Multiplicación -->
+      <button onclick="agregar('/')">/</button>      <!-- División -->
+
+      <!-- Fila 2: números 7-8-9 y resta -->
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="agregar('-')">-</button>
+
+      <!-- Fila 3: números 4-5-6 y suma -->
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="agregar('+')">+</button>
+
+      <!-- Fila 4: números 1-2-3 e igual -->
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <!-- Botón igual ocupa más espacio vertical -->
+      <button class="igual" onclick="calcular()">=</button>
+
+      <!-- Fila 5: botón 0 ocupa doble espacio y botón del punto decimal -->
+      <button class="cero" onclick="agregar('0')">0</button>
+      <button onclick="agregar('.')">.</button>
+    </div> <!-- Fin del contenedor de botones -->
+  </div> <!-- Fin del contenedor principal de la calculadora -->
+
+  <script src="script.js"></script>  <!-- Vincula el archivo JavaScript que contiene la lógica de funcionamiento -->
+
+</body>
+</html>

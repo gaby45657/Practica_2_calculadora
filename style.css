@@ -1,0 +1,125 @@
+/*
+PRACTICA 2 - AUXILIATURA TECNOLOGIAS EMERGENTES I
+ESTUDIANTE: GABRIELA ALEJANDRA CHOQUE MAMANI
+PARALELO: 6C
+CI: 8292331 
+*/
+
+
+/* 
+  Quita márgenes y rellenos por defecto,
+  asegura que el tamaño total de los elementos incluya el borde y el padding,
+  y define la fuente base para todo el documento.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 
+  Estilos del cuerpo 
+
+*/
+body {
+  background-color: #05111b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+/* 
+  Título principal de la calculadora (h1)
+
+*/
+h1 {
+  margin-bottom: 80px;
+  color: #39abab;
+
+}
+
+/* 
+  Contenedor principal de la calculadora (.calculadora)
+
+*/
+.calculadora {
+  background-color: #05111b;
+  padding: 10px;
+  border-radius: 15px;
+  border: 7px solid #1a7e7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+  Pantalla de la calculadora (#pantalla)
+
+*/
+#pantalla {
+  width: 287px;
+  height: 120px;
+  margin-bottom: 10px;
+  font-size: 55px;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid #308484;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+/* 
+  Contenedor de los botones (.botones)
+*/
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 62px);
+  gap: 14px;
+}
+
+/* 
+  Estilos generales de todos los botones
+*/
+button {
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  border: 3px solid #237171;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* 
+  Efecto visual al pasar el cursor sobre un botón
+
+*/
+button:hover {
+  background-color: #286565;
+  color: #0b2c46;
+}
+
+/* 
+  Botón "=" 
+
+*/
+.igual {
+  grid-row: span 2;
+  height: 150px;
+}
+
+/* 
+  Botón "0"
+
+*/
+.cero {
+  grid-column: span 2;
+  width: 135px;
+}
